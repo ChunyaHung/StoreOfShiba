@@ -1,0 +1,33 @@
+<div *ngIf="hero">
+  <h2>關於 {{hero.name | uppercase}}</h2>
+  <div><span>品種編號: </span>{{hero.id}}</div>
+  <div>
+    <!-- <label>品種名:
+      <input matInput  [(ngModel)]="hero.name" placeholder="name"/>
+
+      <button mat-button *ngIf="hero.name" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </label> -->
+    <label>品種名:</label>
+    <mat-form-field class="example-form-field">
+      <!-- <mat-label>品種名</mat-label> -->
+
+      <input matInput type="text" [(ngModel)]="hero.name">
+      <button mat-button *ngIf="hero.name" matSuffix mat-icon-button aria-label="Clear" (click)="hero.name=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+
+  </div>
+  <button (click)="goBack()">返回</button>
+  <button (click)="save()">儲存</button>
+
+</div>
+
+<div style="margin-top: 22px;">
+
+  <img src="{{hero.imgurl}}" alt="dog dog dog" height="250">  <!--alt只是描述，不寫也沒差 -->
+
+</div>
