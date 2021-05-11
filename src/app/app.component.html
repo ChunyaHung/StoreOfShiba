@@ -3,7 +3,7 @@
     <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
   </button>
 
-  <span>寵物 Demo</span>
+  <span>汪大爺寵物店</span>
 
   <!-- 在這之後的都會被推到右邊去 -->
   <span class="toolbar-seprator"></span>
@@ -12,7 +12,7 @@
 <mat-sidenav-container class="demo-app-container">
   <mat-sidenav class="demo-app-sidenav" #sideNav mode="push" (opened)="opened()" (closed)="closed()">
 
-    <div>
+    <div style="margin-bottom: 5px;">
       <a routerLink="/dashboard">
         <button mat-raised-button color="basic" class="menuButton" (click)="toggleSideNav(sideNav)">首頁</button>
       </a>

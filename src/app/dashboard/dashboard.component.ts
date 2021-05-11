@@ -10,6 +10,13 @@ import { HeroService } from '../hero.service';
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
+  gridset = [
+    {cols: 2, rows: 2, color: 'gainsboro'},
+    {cols: 2, rows: 2, color: 'gainsboro'},
+    {cols: 2, rows: 2, color: 'gainsboro'},
+    {cols: 2, rows: 2, color: 'gainsboro'},
+  ];
+
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
@@ -18,6 +25,14 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(0, 4));
+      .subscribe(heroes => {
+        this.heroes = heroes.slice(0, 4);
+
+        this.heroes.forEach((hero, index) => {
+          hero['cols'] = this.gridset[index].cols;
+          hero['rows'] = this.gridset[index].rows;
+          hero['color'] = this.gridset[index].color;
+        });
+      });
   }
 }

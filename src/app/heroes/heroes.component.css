@@ -4,6 +4,9 @@
   list-style-type: none;
   padding: 0;
   width: 15em;
+  display: inline-block;
+  text-align: left;
+
 }
 
 .heroes li {
@@ -14,6 +17,7 @@
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
+
 }
 
 .heroes li:hover {
@@ -71,4 +75,8 @@ button.delete {
   top: -32px;
   background-color: gray !important;
   color: white;
+}
+
+.center {
+  text-align: center;
 }

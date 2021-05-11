@@ -1,11 +1,11 @@
-<div id="search-component">
+<div id="search-component"  style="margin-top: 30px ;">
   <h4>品種搜尋: </h4>
 
   <mat-form-field class="example-form-field">
     請輸入品種: <input #searchBox matInput id="search-box" (input)="search(searchBox.value)" />
   </mat-form-field>
 
-  <ul class="search-result">
+  <ul class="search-result" >
     <li *ngFor="let hero of heroes$ | async" >
       <a routerLink="/detail/{{hero.id}}">
         {{hero.name}}

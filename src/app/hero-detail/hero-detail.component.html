@@ -1,4 +1,4 @@
-<div *ngIf="hero">
+<div *ngIf="hero" class="center">
   <h2>關於 {{hero.name | uppercase}}</h2>
   <div><span>品種編號: </span>{{hero.id}}</div>
   <div>
@@ -26,8 +26,8 @@
 
 </div>
 
-<div style="margin-top: 22px;">
+<div style="margin-top: 22px;" class="center">
 
-  <img src="{{hero.imgurl}}" alt="dog dog dog" height="250">  <!--alt只是描述，不寫也沒差 -->
+  <img src="{{hero?.imgurl}}" alt="dog dog dog" height="250">  <!--alt只是描述，不寫也沒差 -->
 
 </div>
